@@ -1,0 +1,54 @@
+name: dTypo
+channels:
+  - iopath
+  - fvcore
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8.18=h955ad1f_0
+  - cudatoolkit=11.8.0=h6a678d5_0
+  - numpy=1.22.3=py38hf6e8229_2
+  - pip=22.3.1=py38h06a4308_0
+  - yaml=0.2.5=h7f98852_2
+  - cmake
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu118
+      - torch==2.1.2+cu118
+      - torch-tools==0.1.5
+      - torchaudio==2.1.2+cu118
+      - torchmetrics==1.3.0.post0
+      - torchsummary==1.5.1
+      - torchvision==0.16.2+cu118
+      - torch-tools
+      - xformers==0.0.23.post1+cu118
+      - accelerate
+      - ipywidgets
+      - diffusers
+      - easydict
+      - torchsummary
+      - cssutils
+      - shapely
+      - lightning
+      - imageio==2.19.3
+      - imageio-ffmpeg==0.4.7
+      - scikit-image
+      - wandb
+      - moviepy
+      - matplotlib
+      - cairosvg
+      - einops
+      - transformers
+      - accelerate
+      - svgwrite 
+      - svgpathtools 
+      - cssutils 
+      - numba 
+      - scikit-fmm 
+      - easydict 
+      - visdom 
+      - freetype-py 
+      - shapely
+      - opencv-python
+      - kornia==0.6.8
+      - wandb
+      - lpips
