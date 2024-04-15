@@ -30,7 +30,6 @@ class SpecifyGradient(torch.autograd.Function):
     def backward(ctx, grad_scale):
         gt_grad, = ctx.saved_tensors
         gt_grad = gt_grad * grad_scale
-        print('grad_scale', grad_scale)
         return gt_grad, None
 
 

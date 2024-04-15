@@ -55,18 +55,10 @@ def check_length(letter, font):
 
 
     return length
-'''
-def get_letter_ids(letter, word, shape_groups):
-    for group, l in zip(shape_groups, word):
-        if l == letter:
-            print('letter',letter)
-            print('group.shape_ids',group.shape_ids)
-            return group.shape_ids
-'''
-def get_letter_ids_rewrite(letter, word, shape_groups, font):
-    id=0
-    for  i,l in enumerate(word):
 
+def get_letter_ids(letter, word, shape_groups, font):
+    id = 0
+    for i,l in enumerate(word):
         if l != letter:
             id+=check_length(l, font)
         else:
@@ -76,9 +68,7 @@ def get_letter_ids_rewrite(letter, word, shape_groups, font):
 
            
 def compute_last_frame_size(experiment_dir,step,i):
-    print('iiiiiiii',i)
     svg_result = os.path.join(experiment_dir, f"svg_step{step}/frame{i:03d}.svg")
-    print('svg_result',svg_result)
     canvas_width, canvas_height, shapes, shape_groups = pydiffvg.svg_to_scene(svg_result)
     return shapes
 
@@ -89,9 +79,7 @@ def combine_word(word, letter, font,experiment_dir,step,i,resize_by_last_frame=F
 
     letter_ids = []
     for l in letter:
-
-        letter_ids += get_letter_ids_rewrite(l, word, shape_groups_word, font)
-    print('letter_ids',letter_ids)
+        letter_ids += get_letter_ids(l, word, shape_groups_word, font)
     w_min, w_max = min([torch.min(shapes_word[ids].points[:, 0]) for ids in letter_ids]), max(
         [torch.max(shapes_word[ids].points[:, 0]) for ids in letter_ids])
     h_min, h_max = min([torch.min(shapes_word[ids].points[:, 1]) for ids in letter_ids]), max(
@@ -102,7 +90,6 @@ def combine_word(word, letter, font,experiment_dir,step,i,resize_by_last_frame=F
     output_subfolder="svg_step"+str(step)
 
     svg_result = os.path.join(experiment_dir, f"svg_step{step}/frame{i:03d}.svg")
-    print('svg_result',svg_result)
     canvas_width, canvas_height, shapes, shape_groups = pydiffvg.svg_to_scene(svg_result)
 
     out_w_min, out_w_max = min([torch.min(p.points[:, 0]) for p in shapes]), max(
