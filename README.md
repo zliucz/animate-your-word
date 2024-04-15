@@ -10,13 +10,14 @@
 
 > <a href="https://animate-your-text.github.io/demo/">**Dynamic Typography: Bringing Words to Life**</a>
 >
-<a href="https://zliucz.github.io/">Zichen Liu</a>,
-<a href="https://yihao-meng.github.io/">Yihao Meng</a>,
+<a href="https://zliucz.github.io/">Zichen Liu*</a>,
+<a href="https://yihao-meng.github.io/">Yihao Meng*</a>,
 <a href="https://ken-ouyang.github.io/">Hao Ouyang</a>,
 <a href="https://bruceyyu.github.io/">Yue Yu</a>,
 <a href="https://www.linkedin.com/in/bolin-zhao-38664b266/">Bolin Zhao</a>,
 <a href="https://danielcohenor.com/">Daniel Cohen-Or</a>,
 <a href="http://www.huamin.org/index.htm">Huamin Qu</a>
+> \* Denotes equal contribution  
 > <br>
 >  We present an automated text animation scheme, termed "Dynamic Typography," which combines two challenging tasks. It deforms letters to convey semantic meaning and infuses them with vibrant movements based on user prompts.
 </p>
