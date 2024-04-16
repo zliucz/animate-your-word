@@ -1,5 +1,5 @@
 # Dynamic Typography: Bringing Words to Life
-<a href="https://animate-your-text.github.io/demo/"><img src="https://img.shields.io/static/v1?label=Project&message=Website&color=blue"></a>
+<a href="https://animate-your-word.github.io/demo/"><img src="https://img.shields.io/static/v1?label=Project&message=Website&color=blue"></a>
 <a href="https://arxiv.org/abs/2311.13608"><img src="https://img.shields.io/badge/arXiv-2311.13608-b31b1b.svg"></a>
 <a href="https://www.apache.org/licenses/LICENSE-2.0.txt"><img src="https://img.shields.io/badge/License-Apache-yellow"></a>
 
@@ -7,7 +7,7 @@
 <p align="center">
 <img src="figure/teaser.png" width="90%"/>  
 
-> <a href="https://animate-your-text.github.io/demo/">**Dynamic Typography: Bringing Words to Life**</a>
+> <a href="https://animate-your-word.github.io/demo/">**Dynamic Typography: Bringing Words to Life**</a>
 >
 <a href="https://zliucz.github.io/">Zichen Liu*</a>,
 <a href="https://yihao-meng.github.io/">Yihao Meng*</a>,
@@ -20,6 +20,10 @@
 > <br>
 >  We present an automated text animation scheme, termed "Dynamic Typography," which combines two challenging tasks. It deforms letters to convey semantic meaning and infuses them with vibrant movements based on user prompts.
 </p>
+
+
+**Strongly recommend to see our [demo page](https://animate-your-word.github.io/demo/).**
+
 
 # Setup
 ```
@@ -39,6 +43,8 @@ cd diffvg
 git submodule update --init --recursive
 python setup.py install
 ```
+
+
 
 ## Generate Your Animation!
 To animate a letter within a word, run the following command:
@@ -71,12 +77,13 @@ CUDA_VISIBLE_DEVICES=0 python dynamicTypography.py \
 ```
 
 
-The output animation will be saved to "videos". <br>
-The output includes the network's weights, SVG frame logs and their rendered .mp4 files (under svg_logs and mp4_logs respectively). <br>
+The output animation will be saved to "videos". <br> The output includes the network's weights, SVG frame logs and their rendered .mp4 files (under svg_logs and mp4_logs respectively). <br>
 We save both the in-context and the sole letter animation. <br>
 At the end of training, we output a high quality gif render of the last iteration (HG_gif.gif). <br>
 
 We provide many example run scripts in `scripts`, the expected resulting gifs are in `example_gifs`. More results can be found on our [project page](https://animate-your-text.github.io/demo/).
+
+By default, a 24-frame video will be generated, requiring about 28GB of VRAM. If there is not enough VRAM available, the number of frames can be reduced by using the `--num_frames` parameter.
 
 ## Tips:
 
