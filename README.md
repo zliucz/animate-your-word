@@ -80,7 +80,7 @@ We provide many example run scripts in `scripts`, the expected resulting gifs ar
 
 ## Tips:
 
-If your animation remain the same with the original letter's shape or deviate too much from the original letter shape, please set a lower/higher `--perceptual_weight`.
+If your animation remains the same with the original letter's shape or deviate too much from the original letter shape, please set a lower/higher `--perceptual_weight`.
 
 If your want the animation too be less/more geometrically similar to the original letter, please set a lower/higher `--angles_w`.
 
