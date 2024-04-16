@@ -7,7 +7,6 @@
 <p align="center">
 <img src="figure/teaser.png" width="90%"/>  
 
-
 > <a href="https://animate-your-text.github.io/demo/">**Dynamic Typography: Bringing Words to Life**</a>
 >
 <a href="https://zliucz.github.io/">Zichen Liu*</a>,
