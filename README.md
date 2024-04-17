@@ -33,12 +33,13 @@ cd animate-your-word
 ```
 
 ## Environment
-To set up our environment, please run:
+To set up our environment in Linux, please run:
 ```
 conda env create -f environment.yml
 ```
 Next, you need to install diffvg:
 ```bash
+conda activate dTypo
 git clone https://github.com/BachiLi/diffvg.git
 cd diffvg
 git submodule update --init --recursive
