@@ -96,5 +96,17 @@ If you want to further enforce appearance consistency between frames, please set
 
 Small visual artifacts can often be fixed by changing the `--seed`.
 
+## Citation:
+Don't forget to cite this source if it proves useful in your research!
+```bibtex
+@article{liu2024dynamic, 
+	title={Dynamic Typography: Bringing Words to Life}, 
+	author={Zichen Liu and Yihao Meng and Hao Ouyang and Yue Yu and Bolin Zhao and Daniel Cohen-Or and Huamin Qu}, 
+	year={2024}, 
+	eprint={2404.11614}, 
+	archivePrefix={arXiv}, 
+	primaryClass={cs.CV}}
+```
+
 ## Acknowledgment:
 Our implementation is based on [word-as-image](https://github.com/Shiriluz/Word-As-Image) and [live-sketch](https://github.com/yael-vinker/live_sketch). Thanks for their remarkable contribution and released code.
