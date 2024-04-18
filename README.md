@@ -82,7 +82,7 @@ The output animation will be saved to "videos". <br> The output includes the net
 We save both the in-context and the sole letter animation. <br>
 At the end of training, we output a high quality gif render of the last iteration (HG_gif.gif). <br>
 
-We provide many example run scripts in `scripts`, the expected resulting gifs are in `example_gifs`. More results can be found on our [project page](https://animate-your-text.github.io/demo/).
+We provide many example run scripts in `scripts`, the expected resulting gifs are in `example_gifs`. More results can be found on our [project page](https://animate-your-word.github.io/demo/).
 
 By default, a 24-frame video will be generated, requiring about 28GB of VRAM. If there is not enough VRAM available, the number of frames can be reduced by using the `--num_frames` parameter.
 
