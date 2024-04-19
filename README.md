@@ -100,7 +100,7 @@ Small visual artifacts can often be fixed by changing the `--seed`.
 Don't forget to cite this source if it proves useful in your research!
 ```bibtex
 @article{liu2024dynamic, 
-	title={Dynamic Typography: Bringing Words to Life}, 
+	title={Dynamic Typography: Bringing Text to Life via Video Diffusion Prior}, 
 	author={Zichen Liu and Yihao Meng and Hao Ouyang and Yue Yu and Bolin Zhao and Daniel Cohen-Or and Huamin Qu}, 
 	year={2024}, 
 	eprint={2404.11614}, 
