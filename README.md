@@ -22,17 +22,19 @@
 </p>
 
 
-**Strongly recommend to see our [demo page](https://animate-your-word.github.io/demo/).**
+**Strongly recommend seeing our [demo page](https://animate-your-word.github.io/demo/).**
 
+## Requirements:
+All our animation samples are generated with a single H800 GPU with 80GB VRAM. To generate a text animation with 20 or more frames, a GPU with at least 24GB VRAM is required.
 
-# Setup
+## Setup
 ```
 git clone https://github.com/zliucz/animate-your-word.git
 cd animate-your-word
 ```
 
 ## Environment
-To set up our environment in Linux, please run:
+All the tests are conducted in Linux. We suggest running our code in Linux. To set up our environment in Linux, please run:
 ```
 conda env create -f environment.yml
 ```
@@ -44,8 +46,6 @@ cd diffvg
 git submodule update --init --recursive
 python setup.py install
 ```
-
-
 
 ## Generate Your Animation!
 To animate a letter within a word, run the following command:
@@ -67,30 +67,19 @@ CUDA_VISIBLE_DEVICES=0 python dynamicTypography.py \
         --use_perceptual_loss --use_conformal_loss \
         --use_transition_loss
 ```
-or
-```
-CUDA_VISIBLE_DEVICES=0 python dynamicTypography.py \
-        --word "PASSION" --optimized_letter "N" \
-        --caption "Two people kiss each other, one holding the others chin with his hand" \
-        --use_xformer --canonical --anneal \
-        --use_perceptual_loss --use_conformal_loss  \
-        --use_transition_loss --schedule_rate 5.0
-```
 
-
-The output animation will be saved to "videos". <br> The output includes the network's weights, SVG frame logs and their rendered .mp4 files (under svg_logs and mp4_logs respectively). <br>
-We save both the in-context and the sole letter animation. <br>
-At the end of training, we output a high quality gif render of the last iteration (HG_gif.gif). <br>
+The output animation will be saved to "videos". The output includes the network's weights, SVG frame logs, and their rendered .mp4 files (under svg_logs and mp4_logs respectively). We save both the in-context and the sole letter animation.
+At the end of training, we output a high-quality gif render of the last iteration (HG_gif.gif). <br>
 
 We provide many example run scripts in `scripts`, the expected resulting gifs are in `example_gifs`. More results can be found on our [project page](https://animate-your-word.github.io/demo/).
 
-By default, a 24-frame video will be generated, requiring about 28GB of VRAM. If there is not enough VRAM available, the number of frames can be reduced by using the `--num_frames` parameter.
-
 ## Tips:
+
+By default, a 24-frame video will be generated, requiring about 28GB of VRAM. If there is not enough VRAM available, the number of frames can be reduced by using the `--num_frames` parameter.
 
 If your animation remains the same with the original letter's shape or deviate too much from the original letter shape, please set a lower/higher `--perceptual_weight`.
 
-If your want the animation too be less/more geometrically similar to the original letter, please set a lower/higher `--angles_w`.
+If you want the animation to be less/more geometrically similar to the original letter, please set a lower/higher `--angles_w`.
 
 If you want to further enforce appearance consistency between frames, please set a higher `--transition_weight`. But please note that this will reduce the motion amplitude.
 
