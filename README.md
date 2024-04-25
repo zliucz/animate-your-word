@@ -77,11 +77,11 @@ We provide many example run scripts in `scripts`, the expected resulting gifs ar
 
 By default, a 24-frame video will be generated, requiring about 28GB of VRAM. If there is not enough VRAM available, the number of frames can be reduced by using the `--num_frames` parameter.
 
-If your animation remains the same with the original letter's shape or deviate too much from the original letter shape, please set a lower/higher `--perceptual_weight`.
+If your animation remains the same with/deviates too much from the original letter's shape, please set a lower/higher `--perceptual_weight`.
 
 If you want the animation to be less/more geometrically similar to the original letter, please set a lower/higher `--angles_w`.
 
-If you want to further enforce appearance consistency between frames, please set a higher `--transition_weight`. But please note that this will reduce the motion amplitude.
+If you want to further enforce appearance consistency between frames, please set a higher `--transition_weight`. But please keep in mind that this will reduce the motion amplitude.
 
 Small visual artifacts can often be fixed by changing the `--seed`.
 
