@@ -1,4 +1,4 @@
-# Dynamic Typography: Bringing Text to Life via Video Diffusion Prior (*ICCV 2025*)
+# Dynamic Typography: Bringing Text to Life via Video Diffusion Prior (*ICCV 2025, Oral*)
 <a href="https://animate-your-word.github.io/demo/"><img src="https://img.shields.io/static/v1?label=Project&message=Website&color=blue"></a>
 <a href="https://arxiv.org/abs/2404.11614"><img src="https://img.shields.io/badge/arXiv-2404.11614-b31b1b.svg"></a>
 <a href="https://www.apache.org/licenses/LICENSE-2.0.txt"><img src="https://img.shields.io/badge/License-Apache-yellow"></a>
